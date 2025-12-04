@@ -16,22 +16,22 @@ async function handleBuy(priceId: string) {
   });
 }
 
-export default function CleanLinenBreezePage() {
+export default function WhisperingPinesPage() {
   return (
     <main className="min-h-screen bg-stone-100 text-stone-900">
       <div className="max-w-5xl mx-auto px-4 py-10">
 
         <div className="mb-8">
           <img
-            src="/publicproducts/Clean-Linen-Breeze.jpg"
-            alt="Clean Linen Breeze cedar sachet bags"
+            src="/publicproducts/Whispering-Pines.jpg"
+            alt="Whispering Pines cedar sachet bags"
             className="w-full max-h-[480px] object-cover rounded-lg shadow-md"
           />
         </div>
 
-        <h1 className="text-4xl font-serif mb-4">Clean Linen Breeze</h1>
+        <h1 className="text-4xl font-serif mb-4">Whispering Pines</h1>
         <p className="text-lg leading-relaxed mb-8">
-          Clean Linen Breeze blends cedar chips, rosemary, and light lemon peel with a fresh linen essential oil blend for a clean, airy scent that feels like sun-dried laundry without harsh chemicals.
+          Whispering Pines blends cedar chips, rosemary, light dried orange flake, and tiny clove crumbs with an evergreen essential oil blend for a cool, refreshing forest scent inspired by misty pine woods.
         </p>
 
         <section className="mb-10">
@@ -46,7 +46,7 @@ export default function CleanLinenBreezePage() {
                 </div>
                 <button
                   className="px-5 py-2 rounded-full bg-black text-white text-sm font-semibold"
-                  onClick={() => handleBuy("price_1SaQfF8eVpOw1nOMUNtvGHNO")}
+                  onClick={() => handleBuy("price_1SaQfy8eVpOw1nOMkS890WvB")}
                 >
                   Buy 3-Pack
                 </button>
@@ -59,7 +59,7 @@ export default function CleanLinenBreezePage() {
                 </div>
                 <button
                   className="px-5 py-2 rounded-full bg-black text-white text-sm font-semibold"
-                  onClick={() => handleBuy("price_1SaQfa8eVpOw1nOMPTI9OI7g")}
+                  onClick={() => handleBuy("price_1SaQgF8eVpOw1nOMUSh6nZXx")}
                 >
                   Buy 6-Pack
                 </button>
@@ -73,8 +73,9 @@ export default function CleanLinenBreezePage() {
           <ul className="list-disc list-inside space-y-1 text-lg">
             <li>Cedar chips</li>
             <li>Rosemary</li>
-            <li>Light lemon peel</li>
-            <li>Fresh linen essential oil blend</li>
+            <li>Light dried orange flake</li>
+            <li>Micro clove crumbs</li>
+            <li>Evergreen essential oil blend</li>
           </ul>
         </section>
 

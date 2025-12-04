@@ -1,60 +1,83 @@
-import Image from "next/image";
+"use client";
+
+import { loadStripe } from "@stripe/stripe-js";
+
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string);
+
+async function handleBuy(priceId: string) {
+  const stripe = await stripePromise;
+  if (!stripe) return;
+
+  await stripe.redirectToCheckout({
+    lineItems: [{ price: priceId, quantity: 1 }],
+    mode: "payment",
+    successUrl: "/success",
+    cancelUrl: "/canceled",
+  });
+}
 
 export default function CabinHearthPage() {
   return (
-    <main className="min-h-screen bg-linen text-cedar px-6 py-20">
-      <div className="max-w-4xl mx-auto">
+    <main className="min-h-screen bg-stone-100 text-stone-900">
+      <div className="max-w-5xl mx-auto px-4 py-10">
 
-        {/* Product Image */}
-        <Image
-          src="/cabin-hearth.jpg"
-          alt="Cabin Hearth Sachet"
-          width={1200}
-          height={800}
-          className="w-full h-72 object-cover rounded shadow mb-10"
-        />
+        <div className="mb-8">
+          <img
+            src="/publicproducts/cabin-hearth.jpg"
+            alt="Cabin Hearth cedar sachet bags"
+            className="w-full max-h-[480px] object-cover rounded-lg shadow-md"
+          />
+        </div>
 
-        {/* Product Title */}
-        <h1 className="font-playfair text-4xl mb-4">Cabin Hearth</h1>
-
-        {/* Description */}
-        <p className="font-cormorant text-xl mb-6">
-          A warm, comforting blend inspired by a quiet evening by the fire.
-          Cabin Hearth brings together cedar, dried orange, cinnamon, and clove
-          for a cozy, wood-smoked aroma that feels like home.
+        <h1 className="text-4xl font-serif mb-4">Cabin Hearth</h1>
+        <p className="text-lg leading-relaxed mb-8">
+          Cabin Hearth blends cedar chips, dried orange peel, clove, and cinnamon with a warm cabin essential oil blend for a cozy, fireside aroma that feels rustic and naturally comforting.
         </p>
 
-        {/* Ingredients */}
-        <div className="mb-10">
-          <h2 className="font-playfair text-2xl mb-2">Ingredients</h2>
-          <ul className="list-disc pl-6 font-cormorant text-lg">
+        <section className="mb-10">
+          <div className="rounded-xl bg-white shadow-md border border-stone-200 p-6 md:p-8">
+            <h2 className="text-2xl font-serif mb-4">Choose Your Pack</h2>
+
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="font-semibold text-lg">3-Pack</p>
+                  <p className="text-sm text-stone-600">14.99 + 3.99 shipping</p>
+                </div>
+                <button
+                  className="px-5 py-2 rounded-full bg-black text-white text-sm font-semibold"
+                  onClick={() => handleBuy("price_1SaQeH8eVpOw1nOM3EzqyiBC")}
+                >
+                  Buy 3-Pack
+                </button>
+              </div>
+
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="font-semibold text-lg">6-Pack</p>
+                  <p className="text-sm text-stone-600">22.99 + 3.99 shipping</p>
+                </div>
+                <button
+                  className="px-5 py-2 rounded-full bg-black text-white text-sm font-semibold"
+                  onClick={() => handleBuy("price_1SaQeb8eVpOw1nOMr7dzq2Pz")}
+                >
+                  Buy 6-Pack
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-serif mb-3">Ingredients</h2>
+          <ul className="list-disc list-inside space-y-1 text-lg">
             <li>Cedar chips</li>
             <li>Dried orange peel</li>
-            <li>Cinnamon</li>
-            <li>Clove</li>
+            <li>Whole cloves</li>
+            <li>Cinnamon pieces</li>
+            <li>Warm cabin essential oil blend</li>
           </ul>
-        </div>
-
-        {/* Purchase Options */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-xl">
-
-          {/* 3-Pack */}
-          <a
-            href="/checkout?product=cabin-hearth-3"
-            className="block text-center bg-cedar text-linen py-4 rounded shadow hover:bg-charcoal transition text-lg"
-          >
-            3-Pack — $14.99
-          </a>
-
-          {/* 6-Pack */}
-          <a
-            href="/checkout?product=cabin-hearth-6"
-            className="block text-center bg-forest text-linen py-4 rounded shadow hover:bg-charcoal transition text-lg"
-          >
-            6-Pack — $21.99 (Free Shipping)
-          </a>
-
-        </div>
+        </section>
 
       </div>
     </main>

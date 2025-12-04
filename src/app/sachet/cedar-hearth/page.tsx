@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 async function handleBuy(priceId: string) {
   const res = await fetch("/api/checkout", {

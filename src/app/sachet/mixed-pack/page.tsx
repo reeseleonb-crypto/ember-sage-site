@@ -42,7 +42,7 @@ export default function MixedPackPage() {
             href="/checkout?product=mixed-pack-3"
             className="block text-center bg-cedar text-linen py-4 rounded shadow hover:bg-charcoal transition text-lg"
           >
-            Mixed 3-Pack — $14.99
+            Mixed 3-Pack — $14.99 (+ 2.99 Shipping)
           </a>
 
         </div>
