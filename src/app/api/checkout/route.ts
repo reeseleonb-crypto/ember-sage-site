@@ -6,6 +6,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
 export async function POST(req: Request) {
   try {
     const { priceId } = await req.json();
+    console.log("PRICE RECEIVED:", priceId);
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
