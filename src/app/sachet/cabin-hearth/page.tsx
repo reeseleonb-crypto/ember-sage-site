@@ -29,15 +29,11 @@ export default function CabinHearth() {
 
       {/* Description */}
       <p className="text-lg mb-4">
-        Warm spice, cedar, and subtle citrus—Cabin Hearth captures the feeling
-        of a crackling fire on a quiet autumn evening.
+        Warm cedar, soft fireplace embers, and a hint of citrus spice—Cabin Hearth feels like stepping into a quiet mountain lodge at dusk.
       </p>
 
       <p className="text-lg mb-6">
-        Cabin Hearth blends clean red cedar with a gentle fireplace warmth for
-        a cozy, grounded scent. Bright dried orange peel lifts the blend, while
-        whole cloves add a soft, comforting spice. Natural, balanced, and made
-        without harsh chemicals.
+        Cabin Hearth blends clean red cedar with a gentle fireplace warmth for a cozy, grounded scent. Bright dried orange peel adds a subtle lift, while whole cloves bring a smooth, comforting spice that lingers without overpowering the space. Best used in closets, entryways, linen cabinets, mudrooms, and anywhere you want a warm, inviting atmosphere that feels calm and lived-in.
       </p>
 
       {/* Choose Pack */}

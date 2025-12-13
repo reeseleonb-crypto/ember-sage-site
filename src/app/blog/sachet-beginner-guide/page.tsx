@@ -1,6 +1,6 @@
 export const metadata = {
   title: "A Beginners Guide to Using Sachet Bags | Ember & Sage",
-  description: "A Beginner&apos;s Guide to Using Sachet Bags - Cedar sachet tips and natural home fragrance ideas from Ember & Sage.",
+  description: "A Beginners Guide to Using Sachet Bags - Cedar sachet tips and natural home fragrance ideas from Ember & Sage.",
 };
 
 export default function Page() {
