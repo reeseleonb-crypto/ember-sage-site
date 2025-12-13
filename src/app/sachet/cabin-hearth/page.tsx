@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { loadStripe } from "@stripe/stripe-js";
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string);
@@ -32,7 +32,7 @@ export default function CabinHearth() {
         Cabin Hearth blends clean cedarwood with gentle spice for a nostalgic,
         fireside-inspired scent. A touch of warm spice rounds the blend into a
         cozy, lived-in aroma that feels like stepping inside a mountain cabin
-        on a crisp day. ItÃ¢â‚¬â„¢s deeper and cozier than Autumn Trail, making it perfect for bedrooms, dens, and spaces where you want a quietly inviting scent that lingers without ever becoming overwhelming.
+        on a crisp day. ItÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s deeper and cozier than Autumn Trail, making it perfect for bedrooms, dens, and spaces where you want a quietly inviting scent that lingers without ever becoming overwhelming.
       </p>
 
       <div className="border rounded p-4 mb-8">
@@ -44,7 +44,7 @@ export default function CabinHearth() {
             <div className="text-sm">14.99 + 3.99 shipping</div>
           </div>
           <button
-            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvSc8eVpOw1nOMobaeGWG8"); }}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvSC8eVpOw1nOM5BA6EC5A"); }}
             className="bg-black text-white px-4 py-2"
           >
             Buy 3-Pack
@@ -57,7 +57,7 @@ export default function CabinHearth() {
             <div className="text-sm">22.99 + 3.99 shipping</div>
           </div>
           <button
-            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvSc8eVpOw1nOMobaeGWG8"); }}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvSC8eVpOw1nOM5BA6EC5A"); }}
             className="bg-black text-white px-4 py-2"
           >
             Buy 6-Pack

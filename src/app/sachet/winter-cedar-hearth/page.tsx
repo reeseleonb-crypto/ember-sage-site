@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 async function handleBuy(priceId: string) {
   const res = await fetch("/api/checkout", {
@@ -32,7 +32,7 @@ export default function WinterCedarHearthPage() {
         winter twist. This scent blends cedar chips with gentle hints of
         cinnamon, dried orange, and a cool touch of eucalyptus to create a
         fresh-but-warm fragrance reminiscent of stepping indoors after cold
-        air. It’s not holiday-strong — instead, it offers a clean winter
+        air. Itâ€™s not holiday-strong â€” instead, it offers a clean winter
         cabin aroma that lasts for weeks.
       </p>
 
@@ -47,7 +47,7 @@ export default function WinterCedarHearthPage() {
             <p className="text-gray-700 text-sm">14.99 + 3.99 shipping</p>
           </div>
           <button
-            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvVZ8eVpOw1nOM83msDIIC"); }}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvVD8eVpOw1nOM83BoxLB5"); }}
             className="px-5 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
           >
             Buy 3-Pack
@@ -60,7 +60,7 @@ export default function WinterCedarHearthPage() {
             <p className="text-gray-700 text-sm">22.99 + 3.99 shipping</p>
           </div>
           <button
-            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvVZ8eVpOw1nOM83msDIIC"); }}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvVD8eVpOw1nOM83BoxLB5"); }}
             className="px-5 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
           >
             Buy 6-Pack
