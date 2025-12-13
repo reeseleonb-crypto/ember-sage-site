@@ -1,7 +1,4 @@
 ﻿"use client";
-import { loadStripe } from "@stripe/stripe-js";
-
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string);
 
 async function handleBuy(priceId: string) {
   const res = await fetch("/api/checkout", {
@@ -9,7 +6,6 @@ async function handleBuy(priceId: string) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ priceId }),
   });
-
   const data = await res.json();
   window.location.href = data.url;
 }
@@ -18,64 +14,37 @@ export default function CabinHearth() {
   return (
     <div className="p-6 max-w-3xl mx-auto">
 
-      <img
-        src="/cabin-hearth.jpg"
-        alt="Cabin Hearth"
-        className="w-full h-auto rounded mb-6"
-      />
-
-      <p className="text-lg mb-4">
-        Warm cabin cedar, subtle spice, and a comforting, rustic glow.
-      </p>
-
-      <p className="mb-6">
-        Cabin Hearth blends clean cedarwood with gentle spice for a nostalgic,
-        fireside-inspired scent. A touch of warm spice rounds the blend into a
-        cozy, lived-in aroma that feels like stepping inside a mountain cabin
-        on a crisp day. ItÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s deeper and cozier than Autumn Trail, making it perfect for bedrooms, dens, and spaces where you want a quietly inviting scent that lingers without ever becoming overwhelming.
-      </p>
+      <img src="/cabin-hearth.jpg" alt="Cabin Hearth" className="w-full rounded mb-6" />
 
       <div className="border rounded p-4 mb-8">
         <h2 className="text-xl font-semibold mb-4">Choose Your Pack</h2>
 
-        <div className="flex justify-between items-center mb-4">
+        <div className="flex justify-between mb-4">
           <div>
             <div className="font-semibold">3-Pack</div>
             <div className="text-sm">14.99 + 3.99 shipping</div>
           </div>
           <button
-            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvSc8eVpOw1nOMobaeGWG8"); }}
+            onClick={() => handleBuy("price_1SdvSC8eVpOw1nOM5BA6EC5A")}
             className="bg-black text-white px-4 py-2"
           >
             Buy 3-Pack
           </button>
         </div>
 
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between">
           <div>
             <div className="font-semibold">6-Pack</div>
             <div className="text-sm">22.99 + 3.99 shipping</div>
           </div>
           <button
-            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvSc8eVpOw1nOMobaeGWG8"); }}
+            onClick={() => handleBuy("price_1SdvSc8eVpOw1nOMobaeGWG8")}
             className="bg-black text-white px-4 py-2"
           >
             Buy 6-Pack
           </button>
         </div>
       </div>
-
-      <h2 className="text-xl font-semibold mb-2">Ingredients</h2>
-      <ul className="list-disc pl-6">
-        <li>Cedar chips</li>
-        <li>Cinnamon stick pieces</li>
-        <li>Clove pieces</li>
-        <li>Cedarwood essential oil blend</li>
-      </ul>
-
     </div>
   );
 }
-
-
-
