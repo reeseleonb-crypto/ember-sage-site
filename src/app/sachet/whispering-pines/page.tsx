@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { loadStripe } from "@stripe/stripe-js";
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string);
@@ -44,7 +44,7 @@ export default function WhisperingPines() {
             <div className="text-sm">14.99 + 3.99 shipping</div>
           </div>
           <button
-            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvT48eVpOw1nOM8KPP8acN"); }}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvTX8eVpOw1nOM9r2JajW5"); }}
             className="bg-black text-white px-4 py-2"
           >
             Buy 3-Pack
@@ -57,7 +57,7 @@ export default function WhisperingPines() {
             <div className="text-sm">22.99 + 3.99 shipping</div>
           </div>
           <button
-            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvT48eVpOw1nOM8KPP8acN"); }}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvTX8eVpOw1nOM9r2JajW5"); }}
             className="bg-black text-white px-4 py-2"
           >
             Buy 6-Pack

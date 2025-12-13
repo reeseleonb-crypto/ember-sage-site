@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 async function handleBuy(priceId: string) {
   const res = await fetch("/api/checkout", {
@@ -59,7 +59,7 @@ export default function AutumnTrailPage() {
           </div>
           <button
             onClick={() =>
-              handleBuy("price_1SdvW68eVpOw1nOMP6UiamqF")
+              handleBuy("price_1SdvWZ8eVpOw1nOM4b8J1jU3")
             }
             className="px-5 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
           >

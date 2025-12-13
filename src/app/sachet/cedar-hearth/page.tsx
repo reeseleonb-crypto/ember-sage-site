@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 async function handleBuy(priceId: string) {
   const res = await fetch("/api/checkout", {
@@ -49,7 +49,7 @@ export default function CedarHearthPage() {
             <p className="text-gray-700 text-sm">14.99 + 3.99 shipping</p>
           </div>
           <button
-            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvXH8eVpOw1nOMZ2zQtiWP"); }}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvXg8eVpOw1nOM7QI8AOXA"); }}
             className="px-5 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
           >
             Buy 3-Pack
@@ -63,7 +63,7 @@ export default function CedarHearthPage() {
             <p className="text-gray-700 text-sm">22.99 + 3.99 shipping</p>
           </div>
           <button
-            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvXH8eVpOw1nOMZ2zQtiWP"); }}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvXg8eVpOw1nOM7QI8AOXA"); }}
             className="px-5 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
           >
             Buy 6-Pack
