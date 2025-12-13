@@ -43,7 +43,7 @@ export default function AutumnTrailPage() {
           </div>
           <button
             onClick={() =>
-              handleBuy("price_1Sa4lr8eVpOw1nOMONKmTtoJ")
+              handleBuy("price_1SdvWZ8eVpOw1nOM4b8J1jU3")
             }
             className="px-5 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
           >
@@ -59,7 +59,7 @@ export default function AutumnTrailPage() {
           </div>
           <button
             onClick={() =>
-              handleBuy("price_1Sa4m88eVpOw1nOM6LiM5qSn")
+              handleBuy("price_1SdvWZ8eVpOw1nOM4b8J1jU3")
             }
             className="px-5 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
           >
@@ -80,5 +80,6 @@ export default function AutumnTrailPage() {
     </main>
   );
 }
+
 
 

@@ -44,7 +44,7 @@ export default function CabinHearth() {
             <div className="text-sm">14.99 + 3.99 shipping</div>
           </div>
           <button
-            onClick={() => handleBuy("price_1SaQeH8eVpOw1nOM3EzqyiBC")}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvSc8eVpOw1nOMobaeGWG8"); }}
             className="bg-black text-white px-4 py-2"
           >
             Buy 3-Pack
@@ -57,7 +57,7 @@ export default function CabinHearth() {
             <div className="text-sm">22.99 + 3.99 shipping</div>
           </div>
           <button
-            onClick={() => handleBuy("price_1SaQeb8eVpOw1nOMr7dzq2Pz")}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvSc8eVpOw1nOMobaeGWG8"); }}
             className="bg-black text-white px-4 py-2"
           >
             Buy 6-Pack
@@ -76,5 +76,6 @@ export default function CabinHearth() {
     </div>
   );
 }
+
 
 

@@ -44,7 +44,7 @@ export default function WhisperingPines() {
             <div className="text-sm">14.99 + 3.99 shipping</div>
           </div>
           <button
-            onClick={() => handleBuy("price_1SaQfy8eVpOw1nOMkS890WvB")}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvTX8eVpOw1nOM9r2JajW5"); }}
             className="bg-black text-white px-4 py-2"
           >
             Buy 3-Pack
@@ -57,7 +57,7 @@ export default function WhisperingPines() {
             <div className="text-sm">22.99 + 3.99 shipping</div>
           </div>
           <button
-            onClick={() => handleBuy("price_1SaQgF8eVpOw1nOMUSh6nZXx")}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvTX8eVpOw1nOM9r2JajW5"); }}
             className="bg-black text-white px-4 py-2"
           >
             Buy 6-Pack
@@ -76,5 +76,6 @@ export default function WhisperingPines() {
     </div>
   );
 }
+
 
 

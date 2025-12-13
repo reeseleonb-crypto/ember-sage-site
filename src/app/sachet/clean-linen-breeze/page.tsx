@@ -44,7 +44,7 @@ export default function CleanLinenBreeze() {
             <div className="text-sm">14.99 + 3.99 shipping</div>
           </div>
           <button
-            onClick={() => handleBuy("price_1SaQfF8eVpOw1nOMUNtvGHNO")}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvUR8eVpOw1nOMIolrbJf4"); }}
             className="bg-black text-white px-4 py-2"
           >
             Buy 3-Pack
@@ -57,7 +57,7 @@ export default function CleanLinenBreeze() {
             <div className="text-sm">22.99 + 3.99 shipping</div>
           </div>
           <button
-            onClick={() => handleBuy("price_1SaQfa8eVpOw1nOMPTI9OI7g")}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvUR8eVpOw1nOMIolrbJf4"); }}
             className="bg-black text-white px-4 py-2"
           >
             Buy 6-Pack
@@ -76,5 +76,6 @@ export default function CleanLinenBreeze() {
     </div>
   );
 }
+
 
 

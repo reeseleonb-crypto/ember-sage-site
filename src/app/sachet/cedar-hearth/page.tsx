@@ -49,7 +49,7 @@ export default function CedarHearthPage() {
             <p className="text-gray-700 text-sm">14.99 + 3.99 shipping</p>
           </div>
           <button
-            onClick={() => handleBuy("price_1SZN5S8eVpOw1nOMxsE7GxS5")}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvXg8eVpOw1nOM7QI8AOXA"); }}
             className="px-5 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
           >
             Buy 3-Pack
@@ -63,7 +63,7 @@ export default function CedarHearthPage() {
             <p className="text-gray-700 text-sm">22.99 + 3.99 shipping</p>
           </div>
           <button
-            onClick={() => handleBuy("price_1Sa4lR8eVpOw1nOMsjcEFqJP")}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvXg8eVpOw1nOM7QI8AOXA"); }}
             className="px-5 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
           >
             Buy 6-Pack
@@ -82,6 +82,7 @@ export default function CedarHearthPage() {
     </main>
   );
 }
+
 
 
 
