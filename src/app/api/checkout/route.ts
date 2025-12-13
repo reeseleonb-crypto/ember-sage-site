@@ -10,7 +10,24 @@ export async function POST(req: Request) {
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
-      line_items: [{ price: priceId, quantity: 1 }],
+
+      line_items: [
+        {
+          price: priceId,
+          quantity: 1,
+        },
+      ],
+
+      shipping_address_collection: {
+        allowed_countries: ["US"],
+      },
+
+      shipping_options: [
+        {
+          shipping_rate: "shr_1Sdxio8eVpOw1nOMyeUuqinO",
+        },
+      ],
+
       success_url: `${process.env.NEXT_PUBLIC_DOMAIN}/success`,
       cancel_url: `${process.env.NEXT_PUBLIC_DOMAIN}/canceled`,
     });
@@ -18,6 +35,9 @@ export async function POST(req: Request) {
     return NextResponse.json({ url: session.url });
   } catch (error) {
     console.error("Stripe Checkout Error:", error);
-    return NextResponse.json({ error: "Error creating checkout session" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Error creating checkout session" },
+      { status: 500 }
+    );
   }
 }
