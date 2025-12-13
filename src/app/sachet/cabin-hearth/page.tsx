@@ -6,6 +6,7 @@ async function handleBuy(priceId: string) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ priceId }),
   });
+
   const data = await res.json();
   window.location.href = data.url;
 }
@@ -14,8 +15,32 @@ export default function CabinHearth() {
   return (
     <div className="p-6 max-w-3xl mx-auto">
 
-      <img src="/cabin-hearth.jpg" alt="Cabin Hearth" className="w-full rounded mb-6" />
+      {/* Product Image */}
+      <img
+        src="/cabin-hearth.jpg"
+        alt="Cabin Hearth"
+        className="w-full rounded mb-6"
+      />
 
+      {/* Title */}
+      <h1 className="text-3xl font-serif font-bold mb-4">
+        Cabin Hearth
+      </h1>
+
+      {/* Description */}
+      <p className="text-lg mb-4">
+        Warm spice, cedar, and subtle citrus—Cabin Hearth captures the feeling
+        of a crackling fire on a quiet autumn evening.
+      </p>
+
+      <p className="text-lg mb-6">
+        Cabin Hearth blends clean red cedar with a gentle fireplace warmth for
+        a cozy, grounded scent. Bright dried orange peel lifts the blend, while
+        whole cloves add a soft, comforting spice. Natural, balanced, and made
+        without harsh chemicals.
+      </p>
+
+      {/* Choose Pack */}
       <div className="border rounded p-4 mb-8">
         <h2 className="text-xl font-semibold mb-4">Choose Your Pack</h2>
 
@@ -45,7 +70,19 @@ export default function CabinHearth() {
           </button>
         </div>
       </div>
+
+      {/* Ingredients */}
+      <h2 className="text-2xl font-serif font-semibold mb-3">
+        Ingredients
+      </h2>
+
+      <ul className="list-disc ml-6 text-lg space-y-1 mb-10">
+        <li>Cedar chips</li>
+        <li>Dried orange peel</li>
+        <li>Whole cloves</li>
+        <li>Fireplace essential oil blend</li>
+      </ul>
+
     </div>
   );
 }
-
