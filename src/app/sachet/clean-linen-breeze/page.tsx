@@ -44,7 +44,7 @@ export default function CleanLinenBreeze() {
             <div className="text-sm">14.99 + 3.99 shipping</div>
           </div>
           <button
-            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvUR8eVpOw1nOMIolrbJf4"); }}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleBuy("price_1SdvU18eVpOw1nOM6Udvb9WP"); }}
             className="bg-black text-white px-4 py-2"
           >
             Buy 3-Pack
@@ -76,6 +76,7 @@ export default function CleanLinenBreeze() {
     </div>
   );
 }
+
 
 
 
