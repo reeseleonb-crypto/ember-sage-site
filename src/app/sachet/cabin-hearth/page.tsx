@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 async function handleBuy(priceId: string) {
   const res = await fetch("/api/checkout", {
@@ -38,7 +38,7 @@ export default function CabinHearth() {
             <div className="text-sm">22.99 + 3.99 shipping</div>
           </div>
           <button
-            onClick={() => handleBuy("price_1SdvSC8eVpOw1nOM5BA6EC5A")}
+            onClick={() => handleBuy("price_1SdvSc8eVpOw1nOMobaeGWG8")}
             className="bg-black text-white px-4 py-2"
           >
             Buy 6-Pack
