@@ -19,7 +19,7 @@ export default function MixedPackPage() {
 
         {/* Description */}
         <p className="font-cormorant text-xl mb-6">
-          One of each of our signature scents — Cabin Hearth, Clean Linen Breeze,
+          One of each of our signature scents â€” Cabin Hearth, Clean Linen Breeze,
           and Coastal Clean Cedar. A perfect sampler or gift set for anyone who
           loves natural, handcrafted sachet bags.
         </p>
@@ -42,7 +42,7 @@ export default function MixedPackPage() {
             href="/checkout?product=mixed-pack-3"
             className="block text-center bg-cedar text-linen py-4 rounded shadow hover:bg-charcoal transition text-lg"
           >
-            Mixed 3-Pack — $14.99 (+ 2.99 Shipping)
+            Mixed 3-Pack â€” $14.99 (+ 2.99 Shipping)
           </a>
 
         </div>
@@ -51,3 +51,5 @@ export default function MixedPackPage() {
     </main>
   );
 }
+
+

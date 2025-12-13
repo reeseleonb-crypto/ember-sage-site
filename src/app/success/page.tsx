@@ -5,7 +5,7 @@ export default function SuccessPage() {
         <h1 className="text-4xl font-serif font-bold mb-4">Thank You!</h1>
 
         <p className="text-lg text-gray-700 mb-4">
-          Your order has been received and we're already getting to work.
+          Your order has been received and we&apos;re already getting to work.
         </p>
 
         <p className="text-lg text-gray-700 mb-4">
@@ -28,3 +28,5 @@ export default function SuccessPage() {
     </main>
   );
 }
+
+

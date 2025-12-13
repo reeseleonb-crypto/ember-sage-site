@@ -21,7 +21,7 @@ export default function CedarHearthPage() {
       <h1 className="text-5xl font-serif font-bold mb-6">Cedar Hearth</h1>
 
       <img
-        src="/publicproducts/cedar-hearth.jpg"
+        src="/cedar-hearth.jpg"
         alt="Cedar Hearth Sachet Bag"
         className="w-full max-w-md rounded-xl shadow-lg mb-10"
       />
@@ -32,7 +32,7 @@ export default function CedarHearthPage() {
 
       <p className="text-lg mb-6">
         Cedar Hearth blends clean red cedar aroma with a soft, ember-like warmth
-        for a modern, balanced scent. A touch of fireplace essential oil deepens
+        for a modern, balanced scent. A touch of our essential oil blend deepens
         the wood-smoke character, while bright dried orange peel lifts the blend
         with natural citrus. Whole cloves add a warm, comforting spice finish.
         Clean, natural, and made without harsh chemicals.
@@ -82,6 +82,8 @@ export default function CedarHearthPage() {
     </main>
   );
 }
+
+
 
 
 

@@ -1,10 +1,11 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="w-full bg-[#f5f2ec] border-b border-gray-300 py-4 px-6 flex justify-between items-center">
+<header className="relative z-50 w-full bg-[#f5f2ec] border-b border-gray-300 py-4 px-6 flex justify-between items-center">
+
       <Link
         href="/"
         className="text-3xl font-bold"

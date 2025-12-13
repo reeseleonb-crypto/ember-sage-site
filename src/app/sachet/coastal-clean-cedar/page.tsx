@@ -20,7 +20,7 @@ export default function CoastalCleanCedarPage() {
         {/* Description */}
         <p className="font-cormorant text-xl mb-6">
           Smooth cedar, subtle citrus, and a hint of coastal freshness. Coastal
-          Clean Cedar delivers a clean, refined wood aroma with a bright edge —
+          Clean Cedar delivers a clean, refined wood aroma with a bright edge â€”
           perfect for closets, drawers, and linen spaces.
         </p>
 
@@ -42,7 +42,7 @@ export default function CoastalCleanCedarPage() {
             href="/checkout?product=coastal-clean-cedar-3"
             className="block text-center bg-cedar text-linen py-4 rounded shadow hover:bg-charcoal transition text-lg"
           >
-            3-Pack — $14.99 (+ 2.99 Shipping)
+            3-Pack â€” $14.99 (+ 2.99 Shipping)
           </a>
 
           {/* 6-Pack */}
@@ -50,7 +50,7 @@ export default function CoastalCleanCedarPage() {
             href="/checkout?product=coastal-clean-cedar-6"
             className="block text-center bg-forest text-linen py-4 rounded shadow hover:bg-charcoal transition text-lg"
           >
-            6-Pack — $21.99 (Free Shipping)
+            6-Pack â€” $21.99 (Free Shipping)
           </a>
 
         </div>
@@ -59,3 +59,5 @@ export default function CoastalCleanCedarPage() {
     </main>
   );
 }
+
+

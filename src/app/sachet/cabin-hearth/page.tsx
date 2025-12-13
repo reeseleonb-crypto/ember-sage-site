@@ -1,85 +1,80 @@
 "use client";
-
 import { loadStripe } from "@stripe/stripe-js";
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string);
 
 async function handleBuy(priceId: string) {
-  const stripe = await stripePromise;
-  if (!stripe) return;
-
-  await stripe.redirectToCheckout({
-    lineItems: [{ price: priceId, quantity: 1 }],
-    mode: "payment",
-    successUrl: "/success",
-    cancelUrl: "/canceled",
+  const res = await fetch("/api/checkout", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ priceId }),
   });
+
+  const data = await res.json();
+  window.location.href = data.url;
 }
 
-export default function CabinHearthPage() {
+export default function CabinHearth() {
   return (
-    <main className="min-h-screen bg-stone-100 text-stone-900">
-      <div className="max-w-5xl mx-auto px-4 py-10">
+    <div className="p-6 max-w-3xl mx-auto">
 
-        <div className="mb-8">
-          <img
-            src="/publicproducts/cabin-hearth.jpg"
-            alt="Cabin Hearth cedar sachet bags"
-            className="w-full max-h-[480px] object-cover rounded-lg shadow-md"
-          />
+      <img
+        src="/cabin-hearth.jpg"
+        alt="Cabin Hearth"
+        className="w-full h-auto rounded mb-6"
+      />
+
+      <p className="text-lg mb-4">
+        Warm cabin cedar, subtle spice, and a comforting, rustic glow.
+      </p>
+
+      <p className="mb-6">
+        Cabin Hearth blends clean cedarwood with gentle spice for a nostalgic,
+        fireside-inspired scent. A touch of warm spice rounds the blend into a
+        cozy, lived-in aroma that feels like stepping inside a mountain cabin
+        on a crisp day. ItÃ¢â‚¬â„¢s deeper and cozier than Autumn Trail, making it perfect for bedrooms, dens, and spaces where you want a quietly inviting scent that lingers without ever becoming overwhelming.
+      </p>
+
+      <div className="border rounded p-4 mb-8">
+        <h2 className="text-xl font-semibold mb-4">Choose Your Pack</h2>
+
+        <div className="flex justify-between items-center mb-4">
+          <div>
+            <div className="font-semibold">3-Pack</div>
+            <div className="text-sm">14.99 + 3.99 shipping</div>
+          </div>
+          <button
+            onClick={() => handleBuy("price_1SaQeH8eVpOw1nOM3EzqyiBC")}
+            className="bg-black text-white px-4 py-2"
+          >
+            Buy 3-Pack
+          </button>
         </div>
 
-        <h1 className="text-4xl font-serif mb-4">Cabin Hearth</h1>
-        <p className="text-lg leading-relaxed mb-8">
-          Cabin Hearth blends cedar chips, dried orange peel, clove, and cinnamon with a warm cabin essential oil blend for a cozy, fireside aroma that feels rustic and naturally comforting.
-        </p>
-
-        <section className="mb-10">
-          <div className="rounded-xl bg-white shadow-md border border-stone-200 p-6 md:p-8">
-            <h2 className="text-2xl font-serif mb-4">Choose Your Pack</h2>
-
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-semibold text-lg">3-Pack</p>
-                  <p className="text-sm text-stone-600">14.99 + 3.99 shipping</p>
-                </div>
-                <button
-                  className="px-5 py-2 rounded-full bg-black text-white text-sm font-semibold"
-                  onClick={() => handleBuy("price_1SaQeH8eVpOw1nOM3EzqyiBC")}
-                >
-                  Buy 3-Pack
-                </button>
-              </div>
-
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-semibold text-lg">6-Pack</p>
-                  <p className="text-sm text-stone-600">22.99 + 3.99 shipping</p>
-                </div>
-                <button
-                  className="px-5 py-2 rounded-full bg-black text-white text-sm font-semibold"
-                  onClick={() => handleBuy("price_1SaQeb8eVpOw1nOMr7dzq2Pz")}
-                >
-                  Buy 6-Pack
-                </button>
-              </div>
-            </div>
+        <div className="flex justify-between items-center">
+          <div>
+            <div className="font-semibold">6-Pack</div>
+            <div className="text-sm">22.99 + 3.99 shipping</div>
           </div>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-serif mb-3">Ingredients</h2>
-          <ul className="list-disc list-inside space-y-1 text-lg">
-            <li>Cedar chips</li>
-            <li>Dried orange peel</li>
-            <li>Whole cloves</li>
-            <li>Cinnamon pieces</li>
-            <li>Warm cabin essential oil blend</li>
-          </ul>
-        </section>
-
+          <button
+            onClick={() => handleBuy("price_1SaQeb8eVpOw1nOMr7dzq2Pz")}
+            className="bg-black text-white px-4 py-2"
+          >
+            Buy 6-Pack
+          </button>
+        </div>
       </div>
-    </main>
+
+      <h2 className="text-xl font-semibold mb-2">Ingredients</h2>
+      <ul className="list-disc pl-6">
+        <li>Cedar chips</li>
+        <li>Cinnamon stick pieces</li>
+        <li>Clove pieces</li>
+        <li>Cedarwood essential oil blend</li>
+      </ul>
+
+    </div>
   );
 }
+
+

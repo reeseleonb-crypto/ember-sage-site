@@ -16,7 +16,7 @@ export default function AutumnTrailPage() {
       <h1 className="text-5xl font-serif font-bold mb-6">Autumn Trail</h1>
 
       <img
-        src="/publicproducts/autumn-trail.jpg"
+        src="/autumn-trail.jpg"
         alt="Autumn Trail Sachet Bag"
         className="w-full max-w-md rounded-xl shadow-lg mb-10"
       />
@@ -26,9 +26,7 @@ export default function AutumnTrailPage() {
       </p>
 
       <p className="text-lg mb-6">
-        Autumn Trail blends cedar chips, dried orange peel, cinnamon,
-        clove, and subtle autumn essential oils for a cozy fall scent
-        that feels natural and long-lasting.
+        Autumn Trail captures the warm, cozy feeling of walking through fall woods as leaves crackle underfoot. Cedar chips soak in natural notes of dried orange peel, cinnamon, and clove to create a rich seasonal scent that feels warm but not heavy. The citrus adds brightness while the spices soften into the wood, giving this sachet a nostalgic, comforting aroma ideal for bedrooms, entryways, and living rooms throughout the cooler months.
       </p>
 
       {/* Buy Options */}
@@ -77,8 +75,10 @@ export default function AutumnTrailPage() {
         <li>Dried orange peel</li>
         <li>Whole cloves</li>
         <li>Cinnamon bark</li>
-        <li>Autumn spice essential oil</li>
+        <li>Autumn spice blend</li>
       </ul>
     </main>
   );
 }
+
+
