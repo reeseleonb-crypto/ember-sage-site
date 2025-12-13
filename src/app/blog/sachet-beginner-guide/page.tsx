@@ -6,7 +6,7 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="max-w-3xl mx-auto p-6 text-lg leading-relaxed space-y-6">
-      <h1 className="text-3xl font-bold mb-6">A Beginner&apos;s Guide to Using Sachet Bags</h1>
+      <h1 className="text-3xl font-bold mb-6">A Beginners Guide to Using Sachet Bags</h1>
       <article className="space-y-6">
         <p>If you have never used sachet bags before, they can seem almost too simple to matter. In reality, they are one of the easiest ways to control how small spaces in your home smell. A sachet is just a breathable bag filled with something that holds fragrance, and when that filler is cedar, it becomes a surprisingly powerful tool.</p>
 
