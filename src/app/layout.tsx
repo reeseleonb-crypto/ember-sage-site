@@ -2,6 +2,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Playfair_Display } from "next/font/google";
+import type { Metadata } from "next";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -9,7 +10,7 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL("https://sachetbags.com"),
   title: "Ember & Sage",
   description: "Cleaner, fresher, better-smelling.",
