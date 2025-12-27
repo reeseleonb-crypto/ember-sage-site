@@ -10,18 +10,24 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://sachetbags.com"),
   title: "Ember & Sage",
   description: "Cleaner, fresher, better-smelling.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={playfair.variable}>
       <body className="min-h-screen flex flex-col">
         <Header />
-        <main className="flex-grow">
-          {children}
-        </main>
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>
