@@ -1,3 +1,9 @@
+export const metadata = {
+  alternates: {
+    canonical: "https://sachetbags.com/",
+  },
+};
+
 export default function HomePage() {
   return (
     <main

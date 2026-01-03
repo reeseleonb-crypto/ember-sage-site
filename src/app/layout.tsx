@@ -11,8 +11,11 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sachetbags.com/"),
-  title: "Ember & Sage",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_DOMAIN || "https://sachetbags.com"),
+  title: {
+    default: "Ember & Sage",
+    template: "%s | Ember & Sage",
+  },
   description: "Cleaner, fresher, better-smelling.",
   alternates: {
     canonical: "/",
